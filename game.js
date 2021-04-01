@@ -10,8 +10,8 @@ document.getElementById("name_player2").innerHTML=playerName_2 + "-";
 document.getElementById("score_player1").innerHTML=player1_score;
 document.getElementById("score_player2").innerHTML=player2_score;
 
-document.getElementById("question").innerHTML="Question Turn-" + playerName_1;
-document.getElementById("answer").innerHTML="Answer Turn-" + playerName_2;
+document.getElementById("question1").innerHTML="Question Turn-" + playerName_1;
+document.getElementById("answer1").innerHTML="Answer Turn-" + playerName_2;
 
 function Send(){
 	number1 = document.getElementById("text_input1").value;
@@ -30,5 +30,48 @@ function Send(){
 }
 
 
-question_turn = "playerName_1";
-answer_turn = "playerName_1";
+question_turn = "player1";
+answer_turn = "player2";
+
+function check()
+{
+	get_answer = document.getElementById("input_check_box").value;
+	if(get_answer == actual_answer)	
+	{
+		if(answer_turn == "player1")
+		{
+			player1_score = player1_score +1;
+		    document.getElementById("player1_score").innerHTML = player1_score;
+		}
+		else 
+		{
+			player2_score = player2_score +1;
+		    document.getElementById("player2_score").innerHTML = player2_score;
+		}
+	}
+	
+	if(question_turn == "player1")
+	{
+		question_turn = "player2"
+		document.getElementById("question1").innerHTML = "Question Turn - " + player2_name ;
+	}
+	else 
+	{
+		question_turn = "player1"
+		document.getElementById("question1").innerHTML = "Question Turn - " + player1_name ;
+	}
+
+	if(answer_turn == "player1")
+	{
+		answer_turn = "player2"
+		document.getElementById("answer1").innerHTML = "Answer Turn - " + player2_name ;
+	}
+	else 
+	{
+		answer_turn = "player1"
+		document.getElementById("answer1").innerHTML = "Answer Turn - " + player1_name ;
+	}
+
+    document.getElementById("output1").innerHTML = "";
+}
+
