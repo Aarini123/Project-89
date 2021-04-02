@@ -41,35 +41,35 @@ function check()
 		if(answer_turn == "player1")
 		{
 			player1_score = player1_score +1;
-		    document.getElementById("player1_score").innerHTML = player1_score;
+		    document.getElementById("score_player1").innerHTML = player1_score;
 		}
 		else 
 		{
 			player2_score = player2_score +1;
-		    document.getElementById("player2_score").innerHTML = player2_score;
+		    document.getElementById("score_player2").innerHTML = player2_score;
 		}
 	}
 	
 	if(question_turn == "player1")
 	{
-		question_turn = "player2"
-		document.getElementById("question1").innerHTML = "Question Turn - " + player2_name ;
+		question_turn = "player2";
+		document.getElementById("question1").innerHTML = "Question Turn - " + playerName_2 ;
 	}
 	else 
 	{
-		question_turn = "player1"
-		document.getElementById("question1").innerHTML = "Question Turn - " + player1_name ;
+		question_turn = "player1";
+		document.getElementById("question1").innerHTML = "Question Turn - " + playerName_1 ;
 	}
 
 	if(answer_turn == "player1")
 	{
-		answer_turn = "player2"
-		document.getElementById("answer1").innerHTML = "Answer Turn - " + player2_name ;
+		answer_turn = "player2";
+		document.getElementById("answer1").innerHTML = "Answer Turn - " + playerName_2 ;
 	}
 	else 
 	{
-		answer_turn = "player1"
-		document.getElementById("answer1").innerHTML = "Answer Turn - " + player1_name ;
+		answer_turn = "player1";
+		document.getElementById("answer1").innerHTML = "Answer Turn - " + playerName_1 ;
 	}
 
     document.getElementById("output1").innerHTML = "";
